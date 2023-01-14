@@ -13,7 +13,9 @@ class Hat:
         if num >len(self.contents):
             return self.contents
         for x in range(num):
-            drawn = self.contents.pop(random.randint(0, len(self.contents)-1))
+            num = random.randint(0, len(self.contents)-1)
+            drawn = self.contents[num]
+            self.contents.pop(num)
             takenList.append(drawn)
         return takenList
     
